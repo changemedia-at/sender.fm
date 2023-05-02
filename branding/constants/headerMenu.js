@@ -7,6 +7,7 @@ export default {
     // {
     //   name: 'Über Yunite',
     //   url: 'https://yunite.org',
+    //   target: '_blank',
     // },
   ],
 }
