@@ -1,3 +1,5 @@
+# LICENSE
+
 MIT License
 
 Copyright \(c\) 2022 by the [Ocelot.Social Community](https://github.com/Ocelot-Social-Community)

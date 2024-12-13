@@ -3,24 +3,27 @@ environments:
   default:
     values:
       - ./environments/default.yaml.gotmpl
+  production:
+    values:
+      - ./environments/production.yaml.gotmpl
 ---
 repositories:
   - name: ocelot-social
     url: git+https://github.com/Ocelot-Social-Community/Ocelot-Social@deployment/helm/charts?ref=hetzner
 
 releases:
-  - name: ocelot-social
+  - name: sender-fm
     namespace: {{ .StateValues.namespace }}
     chart: ocelot-social/ocelot-social
     values:
     - ./values/ocelot.yaml.gotmpl
     secrets:
-      - ./secrets/ocelot.yaml
+    - ./secrets/ocelot.yaml
 
   - name: ocelot-neo4j
     namespace: {{ .StateValues.namespace }}
-    chart: ocelot-social/ocelot-social
+    chart: ocelot-social/ocelot-neo4j
     values:
     - ./values/ocelot.yaml.gotmpl
     secrets:
-      - ./secrets/ocelot.yaml
+    - ./secrets/ocelot.yaml
